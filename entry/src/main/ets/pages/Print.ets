@@ -46,7 +46,7 @@ struct Print {
         .textZoomRatio(100)
         .onControllerAttached(() => {
           const params = this.getUIContext().getRouter().getParams() as PrintParam;
-          this.controller.loadData(params.html, "text/html", "UTF-8", "http://127.0.0.1:6806/")
+          this.controller.loadData(params.html, "text/html", "UTF-8", "http://127.0.0.1:6817/")
         })
         .onPageEnd(() => {
           try {

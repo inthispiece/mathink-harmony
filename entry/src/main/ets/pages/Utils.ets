@@ -237,7 +237,7 @@ export struct Utils {
   private static async requestKernelExit(force: boolean): Promise<number | undefined> {
     const request = http.createHttp();
     try {
-      const response = await request.request("http://127.0.0.1:6806/api/system/exit", {
+      const response = await request.request("http://127.0.0.1:6817/api/system/exit", {
         method: http.RequestMethod.POST,
         header: {
           "Content-Type": "application/json"
@@ -293,7 +293,7 @@ export struct Utils {
     }
 
     if (url.startsWith("/")) {
-      url = "http://127.0.0.1:6806" + url;
+      url = "http://127.0.0.1:6817" + url;
     }
 
     const context = Utils.getContext();

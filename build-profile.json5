@@ -1,24 +1,9 @@
 {
   "app": {
-    "signingConfigs": [
-      {
-        "name": "default",
-        "type": "HarmonyOS",
-        "material": {
-          "storeFile": "D:/微云同步助手/845765/Keystore/siyuan-harmony.p12",
-          "storePassword": "0000001A6E292CFFD48976196DCF924BC14EB74DD0D6A8CBEC263EFA159A43D4837059DE9EBD9817ED0A",
-          "keyAlias": "key0",
-          "keyPassword": "0000001A6F1589CA931F285E1DC692E0B098C64DA1E100CD3CD624CE0A966500F3DBBFBDCEF68D0A4F36",
-          "signAlg": "SHA256withECDSA",
-          "profile": "D:/微云同步助手/845765/Keystore/SiYuan鸿蒙Release.p7b",
-          "certpath": "D:/微云同步助手/845765/Keystore/思源笔记鸿蒙.cer"
-        }
-      }
-    ],
+    "signingConfigs": [],
     "products": [
       {
         "name": "default",
-        "signingConfig": "default",
         "runtimeOS": "HarmonyOS",
         "buildOption": {
           "strictMode": {

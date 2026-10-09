@@ -41,17 +41,9 @@ export default struct PrivacyPolicyDialog {
           .margin({ top: 30, bottom: 19 })
 
         Scroll() {
-          Text() {
-            Span($r('app.string.privacy_policy_start'))
-            Span($r('app.string.user_agreement_two')).fontColor($r('app.color.mainColor')).onClick(() => {
-              Utils.openByDefaultBrowser("https://b3log.org/siyuan/eula.html");
-            })
-            Span($r('app.string.and'))
-            Span($r('app.string.privacy_policy_two')).fontColor($r('app.color.mainColor')).onClick(() => {
-              Utils.openByDefaultBrowser("https://b3log.org/siyuan/privacy.html");
-            })
-          }.fontSize(16).fontColor($r('app.color.body_color')).margin({ left: 25, right: 25 })
-        }.height(120)
+          Text("MathInk 是免费开源的数学笔记实验版。笔迹与笔记默认保存在本机，可离线书写。只有你选择选区并同意联网识别后，选区图片才会发送到你配置的识别网关及 Mathpix；原始笔迹坐标不上传。联网识别可能收费，限额用尽不影响本地笔记。拒绝识别不会影响书写。本机不包含服务商密钥；网关管理员应按公开部署说明关闭改进模型设置，并仅保存计费和请求状态，不记录图片与公式正文。卸载可能移除本地数据，请先导出备份。软件按 AGPL-3.0-or-later 提供，不保证公式正确，确认前请核对原稿。源码、问题反馈及完整协议：https://github.com/inthispiece/math-ink。此文本用于本地实验，商城发行前须补充实际运营主体、联系地址及最终服务信息。")
+            .fontSize(16).fontColor($r('app.color.body_color')).margin({ left: 25, right: 25 })
+        }.height(260)
 
         Column() {
           Button($r('app.string.disagree_privacy_policy')).onClick(() => {

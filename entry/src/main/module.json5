@@ -19,7 +19,7 @@
         "srcEntry": "./ets/entryability/EntryAbility.ets",
         "description": "$string:EntryAbility_desc",
         "label": "$string:EntryAbility_label",
-        "startWindowIcon": "$media:startIcon",
+        "startWindowIcon": "$media:mathink_foreground",
         "startWindowBackground": "$color:white",
         "exported": true,
         "skills": [
@@ -40,7 +40,7 @@
             ],
             "uris": [
               {
-                "scheme": "siyuan"
+                "scheme": "mathink"
               }
             ]
           }
@@ -62,7 +62,7 @@
         "description": "$string:shorthand_label",
         "icon": "$media:shorthand",
         "label": "$string:shorthand_label",
-        "startWindowIcon": "$media:startIcon",
+        "startWindowIcon": "$media:mathink_foreground",
         "startWindowBackground": "$color:white",
         "exported": true,
         "skills": [

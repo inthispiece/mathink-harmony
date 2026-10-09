@@ -99,7 +99,7 @@ struct Main {
     const request = event.request;
     const origin = request.getOrigin();
     const resources = request.getAccessibleResource();
-    if ((origin !== "http://127.0.0.1:6806" && origin !== "http://127.0.0.1:6806/") ||
+    if ((origin !== "http://127.0.0.1:6817" && origin !== "http://127.0.0.1:6817/") ||
       resources.length !== 1 || resources[0] !== ProtectedResourceType.AUDIO_CAPTURE) {
       hilog.warn(0x0000, "siyuan",
         "deny web permission request from origin [" + origin + "], resources [" + JSON.stringify(resources) + "]");
@@ -142,7 +142,7 @@ struct Main {
         })
         .onPageBegin((event) => {
           const url = event?.url;
-          if (url && url.startsWith("http://127.0.0.1:6806/") &&
+          if (url && url.startsWith("http://127.0.0.1:6817/") &&
             0 > url.indexOf("/appearance/boot/")) {
             this.mediaPlaybackRequiresUserGesture = true;
             this.mainPageNavigationStarted = true;
@@ -467,7 +467,7 @@ struct Main {
     this.mainPageReady = false;
     const safeParameter = this.forceDefaultBootAppearance ? "&appearance=0" : "";
     try {
-      this.controller.loadUrl("http://127.0.0.1:6806/appearance/boot/index.html?v=" + Utils.appVer + safeParameter);
+      this.controller.loadUrl("http://127.0.0.1:6817/appearance/boot/index.html?v=" + Utils.appVer + safeParameter);
     } catch (e) {
       hilog.error(0x0000, "siyuan", "load boot page failed: " + e);
       this.forceDefaultBootAppearance = true;
@@ -499,7 +499,7 @@ struct Main {
 
     const request = http.createHttp();
     this.bootProgressRequest = request;
-    request.request("http://127.0.0.1:6806/api/system/bootProgress", {
+    request.request("http://127.0.0.1:6817/api/system/bootProgress", {
       method: http.RequestMethod.GET,
       expectDataType: http.HttpDataType.STRING,
       usingCache: false,
@@ -560,7 +560,7 @@ struct Main {
     this.mainPageReady = false;
     this.forceDefaultBootAppearance = false;
     try {
-      this.controller.loadUrl("http://127.0.0.1:6806/");
+      this.controller.loadUrl("http://127.0.0.1:6817/");
     } catch (e) {
       hilog.error(0x0000, "siyuan", "load main page failed: " + e);
       this.mainPageNavigationStarted = false;

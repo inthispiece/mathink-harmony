@@ -432,7 +432,7 @@ export struct JSHarmony {
     // Support opening assets through other apps on HarmonyOS NEXT https://github.com/siyuan-note/siyuan/issues/15691
     const assetAbsPath = napi.getAssetAbsPath(url);
     if (!fs.accessSync(assetAbsPath)) {
-      url = "http://127.0.0.1:6806/" + url;
+      url = "http://127.0.0.1:6817/" + url;
       Utils.openByDefaultBrowser(url);
       return;
     }
